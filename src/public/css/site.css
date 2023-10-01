@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.left {
+    width: 40%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+.right {
+    width: 60%;
+    height: 100%;
+    background-color: wheat;
+}
+
+.right-top {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-color: aqua;
+}
+
+.right-bottom {
+    width: 100%;
+    height: 50%;
+    background-color: red;
+}
+
+.right-top-left {
+    width: 55%;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.right-top-right {
+    width: 45%;
+    height: 100%;
+    background-color: green;
+}
