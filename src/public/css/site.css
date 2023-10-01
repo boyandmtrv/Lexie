@@ -37,12 +37,27 @@ html, body {
     align-items: center;
 }
 
+.left-nav-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.left-nav-right li {
+    display: inline-block;
+}
+
 .left-nav-right a {
-    margin-right: 20px;
+    text-decoration: none;
+    color: #000;
+    width: 100px;
+    display: block;
+    text-transform: uppercase;
+    /* margin-right: 20px;
     text-decoration: none;
     color: #000;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 14px; */
 }
 
 .left .heading {
@@ -121,4 +136,18 @@ html, body {
     background-image: url('/images/book.jpg');
     background-size: cover;
     background-position: bottom;
+}
+
+@media (max-width: 500px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .main .left {
+        width: 100%;
+    }
+
+    .main .right {
+        width: 100%;
+    }
 }
