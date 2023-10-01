@@ -19,6 +19,7 @@ html, body {
 }
 
 .left {
+    position: relative;
     width: 40%;
     height: 100%;
     background-color: aliceblue;
@@ -51,6 +52,29 @@ html, body {
     transform: translate(-50%, -50%);
 }
 
+.heading h1 {
+    font-size: 100px;
+    font-weight: 900;
+}
+
+.heading p {
+    opacity: .6;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.heading a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: .6;
+}
+
 .right {
     width: 60%;
     height: 100%;
@@ -71,9 +95,18 @@ html, body {
 }
 
 .right-top-left {
+    position: relative;
     width: 55%;
     height: 100%;
     background-color: aquamarine;
+    background-image: url('/images/book.jpg');
+}
+
+.box-text-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .right-top-right {
