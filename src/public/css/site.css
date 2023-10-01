@@ -6,7 +6,8 @@
 
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -15,7 +16,6 @@ html, body {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: red;
 }
 
 .left {
@@ -44,7 +44,7 @@ html, body {
 .left-nav-right ul {
     list-style: none;
     padding: 0;
-    margin-right: 0;    
+    margin-right: 0;
 }
 
 .left-nav-right li {
@@ -57,11 +57,6 @@ html, body {
     width: 100px;
     display: block;
     text-transform: uppercase;
-    /* margin-right: 20px;
-    text-decoration: none;
-    color: #000;
-    font-weight: 500;
-    font-size: 14px; */
 }
 
 .left .heading {
@@ -78,10 +73,15 @@ html, body {
 
 .heading p {
     opacity: .6;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.heading span {
+    color: #000;
+    font-weight: 800;
 }
 
 .heading a {
@@ -97,51 +97,76 @@ html, body {
 .right {
     width: 60%;
     height: 100%;
-    background-color: wheat;
-}
+    background-image: url('/images/organize.jpeg');
+    background-size: cover;
+    background-position: center;
+} 
 
 .right-top {
     display: flex;
     width: 100%;
     height: 50%;
-    background-color: aqua;
+    
 }
 
 .right-bottom {
     position: relative;
     width: 100%;
     height: 50%;
-    background-color: #FFD52E;
-    border-end-end-radius: 19px;
-    /* background-image: url('/images/book.jpg');
-    background-size: cover;
-    background-position: center; */
+    background-color: #ffd0934f;
+    color: #fff;
 }
 
 .right-top-left {
     position: relative;
-    width: 55%;
+    width: 50%;
     height: 100%;
-    background-color: #efefef;
-}
-
-.box-text-left, .box-text-right, .box-text-bottom {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-right: 1px solid #cecece9f;
 }
 
 .right-top-right {
     position: relative;
-    width: 45%;
+    width: 50%;
     height: 100%;
-    background-color: #e7e7e7;
-    /* background-image: url('/images/book.jpg');
-    background-size: cover;
-    background-position: bottom; */
 }
 
+.right-top-left,
+.right-top-right {
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.box-text-left,
+.box-text-right,
+.box-text-bottom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+
+.box-text-left,
+.box-text-right {
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.504);
+}
+
+.box-text-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sign-up {
+    margin: 20px auto; 
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #9cf3fe96;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    cursor: pointer;
+}
 
 @media (max-width: 1080px) {
     .main {
