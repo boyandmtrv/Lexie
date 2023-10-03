@@ -50,11 +50,11 @@
     font-size: 100px;
     font-weight: 900;
     border-right: 5px solid #dfdfdf;
-    width: 100%;
+    width: 75%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 1.5s,
-        cursor .4s step-end infinite alternate;
+    animation: typing 1.5s ,
+        cursor .5s step-end infinite alternate;
 }
 
 @keyframes cursor {
@@ -168,6 +168,10 @@
 }
 
 @media (max-width: 1080px) {
+
+    .heading h1 {
+        width: 100%;
+    }
     main {
         flex-direction: column;
     }
