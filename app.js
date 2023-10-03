@@ -21,4 +21,8 @@ app.get('/note', (req, res) => {
     res.render('note')
 })
 
+app.get('/dashboard', (req, res) => {
+    res.render('dashboard')
+})
+
 app.listen(PORT, () => console.log('Server is listening'))
