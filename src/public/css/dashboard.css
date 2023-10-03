@@ -48,8 +48,9 @@
 }
 
 .dash-title p {
+    margin-top: 20px;
     opacity:  .7;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .main-nav {
@@ -58,13 +59,11 @@
     align-items: center;
     width: 100%;
     height: 90%;
-    background-color: bisque;
-    
+    background-color: #e2e2e2;   
 }
 
 .main-nav ul { 
     list-style: none;
-    background-color: red;
 }
 
 .main-nav li {
@@ -74,6 +73,7 @@
 .main-nav ul li a {
     text-decoration: none;
     color: #000;
+    font-size: 50px;
     margin-bottom: 10px;
 }
 
@@ -83,7 +83,7 @@
     background-color: red;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 1080px) {
     main .left-side {
         width: 100%;
     }
