@@ -25,4 +25,8 @@ app.get('/dashboard', (req, res) => {
     res.render('dashboard')
 })
 
+app.get('/create', (req, res) => {
+    res.render('create')
+})
+
 app.listen(PORT, () => console.log('Server is listening'))

@@ -3,6 +3,7 @@
 @import url(home.css);
 @import url(dashboard.css);
 @import url(note.css);
+@import url(create.css);
 
 * {
     margin: 0;
