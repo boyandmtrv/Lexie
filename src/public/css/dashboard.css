@@ -1,3 +1,98 @@
-h1 {
+.left-side {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    background-color: white;
+}
+
+.right-side {
+    width: 30%;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.dash-nav {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.dash-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 0;
+}
+
+.dash-nav li {
+    display: inline-block;
+}
+
+.dash-nav a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+.left-side .dash-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -50%);
+}
+
+.dash-title h1 {
+    font-size: 150px;
+    font-weight: 900;
+}
+
+.dash-title p {
+    opacity:  .7;
+    font-size: 50px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    background-color: bisque;
     
+}
+
+.main-nav ul { 
+    list-style: none;
+    background-color: red;
+}
+
+.main-nav li {
+    margin-bottom: 50px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.little-title {
+    width: 100%;
+    height: 10%;
+    background-color: red;
+}
+
+@media(max-width: 500px) {
+    main .left-side {
+        width: 100%;
+    }
+
+    main .dash-title h1 {
+        font-size: 20px;
+    }
+
+    main .right-side {
+        width: 100%;
+    }
 }
