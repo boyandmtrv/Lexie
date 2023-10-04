@@ -7,7 +7,7 @@ router.get('/records', (req, res) => {
 
     const notes = noteManager.getAll(search, from, to);
 
-    res.render('records', { notes })
+    res.render('records', { notes, search, from, to })
 });
 
 module.exports = router;
