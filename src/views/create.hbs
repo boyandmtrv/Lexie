@@ -11,7 +11,15 @@
             <div class="bottom-section">
                 <div class="user-note">
                     <div class="user-create-box">
-                        <h1 class="user-text">test1</h1>
+                        <div class="form">
+                            <form action="/notes/create" method="POST">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name">
+                                <label for="name">Description</label>
+                                <textarea id="name" name="description"></textarea>
+                                <input type="submit" value="Create">
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="work-note">
