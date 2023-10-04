@@ -27,6 +27,11 @@ router.post('/note', (req, res) => {
 
 router.get('/:noteId/details', (req, res) => {
     const note = noteManager.getOne(req.params.noteId);
+
+    if (!note) {
+        return res.redirect('/404');    
+    };
+
     res.render('details', { note });
 });
 
