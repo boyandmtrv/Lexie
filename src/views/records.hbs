@@ -1,12 +1,9 @@
 <main>
     <div class="record-section">
         {{#each notes}}
-        <div class="each-note">
-            <p class="name">{{name}}</p>
-            <p><span>Type:</span>{{typeRelated}}</p>
-            <p><span>Date</span>{{date}}</p>
-            <a class="btn" href="/details/">Details </a>
-        </div>
+            {{>noteCard}}
+        {{else}}
+            <p>There are no notes yet</p>
         {{/each}}
     </div>
 </main>

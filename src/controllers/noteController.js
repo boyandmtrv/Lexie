@@ -25,4 +25,9 @@ router.post('/note', (req, res) => {
     res.redirect('/records')
 });
 
+router.get('/:noteId/details', (req, res) => {
+    const note = noteManager.getOne(req.params.noteId);
+    res.render('details', { note });
+});
+
 module.exports = router;

@@ -1,7 +1,10 @@
 const uniqid = require('uniqid');
-const notes = [];
+const notes = [
+    
+];
 
 exports.getAll = () => notes.slice();
+exports.getOne = (noteId) => notes.find(n => n.id == noteId);
 
 exports.create = (noteData) => {
     
