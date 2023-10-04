@@ -1,3 +1,4 @@
+const uniqid = require('uniqid');
 const notes = [];
 
 exports.getAll = () => notes.slice();
@@ -5,7 +6,7 @@ exports.getAll = () => notes.slice();
 exports.create = (noteData) => {
     
     const newNote = {
-        id: notes.length + 1,
+        id: uniqid(),
         ...noteData
     };
 
