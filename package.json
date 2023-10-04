@@ -7,10 +7,10 @@
   "name": "lexie",
   "description": "",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "src/app.js",
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
