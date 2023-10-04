@@ -1,59 +1,66 @@
-.create-section {
-    width: 100%;
+.left-side {
+    position: relative;
+    width: 70%;
     height: 100%;
-    background-color: wheat;
+    background-color: white;
 }
 
-.top-part {
+.left-side-top {
     display: flex;
     width: 100%;
-    height: 25%;
-    background-color: #eaf6f698;
+    height: 30%;
+    background-color: #FFFFFF
 }
 
-.bottom-part {
-    position: relative;
-    width: 100%;
-    height: 75%;
-    background-color: #eaf6f698;
-}
-
-.top-header {
+.left-side-head {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: purple;
 }
 
-.bottom-section {
+.dash-title h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.left-side-bottom {
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+.left-side-user {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: red;
+    border-top: 1px solid #ccc;
+    background-color: #FFFFFF;
 }
 
-.user-note {
+.user-create-box {
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background-color: beige;
-}
+    left: 25%;
+} 
 
-.create-text,
-.user-text {
+.user-create-box li {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 40%;
+    transition: .25s;
+    transform: translate(-50%, -50%), scale(1);
+    list-style: none;
+    font-size: 100px;
 }
 
-@media (max-width: 1080px) {
+.user-create-box li:hover  {
+    transform: scale(2);
 
-    .bottom-section {
-        flex-direction: column;
-    }
-
-    .user-note {
-        width: 100%;
-    }
 }
+
+.user-create-box li i {
+    color: black;
+}
+
+
