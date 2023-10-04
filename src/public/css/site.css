@@ -4,6 +4,7 @@
 @import url(dashboard.css);
 @import url(note.css);
 @import url(create.css);
+@import url(records.css);
 
 * {
     margin: 0;
