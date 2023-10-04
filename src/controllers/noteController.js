@@ -1,13 +1,13 @@
 const router = require('express').Router();
 
-router.get('/create', (req, res) => {
-    res.render('create');
-}); 
+router.get('/note', (req, res) => {
+    res.render('note')
+});
 
-router.post('/create', (req, res) => {
+router.post('/note', (req, res) => {
     console.log(req.body);
 
-    res.redirect('/dashboard')
+    res.redirect('/records')
 });
 
 module.exports = router;

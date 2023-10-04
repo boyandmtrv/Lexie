@@ -34,31 +34,13 @@
 
 .user-note {
     position: relative;
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: beige;
 }
 
-.work-note {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    background-color: aqua;
-}
-
-.user-create-box,
-.work-create-box {
-    margin-left: 25%;
-    margin-top: 7%;
-    width: 50%;
-    height: 80%;
-    background-color: red;
-}
-
 .create-text,
-.create-text-bottom,
-.user-text,
-.work-text {
+.user-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,9 +48,7 @@
 }
 
 @media (max-width: 1080px) {
-    .top-part {
-        height: 20%;
-    }
+
     .bottom-section {
         flex-direction: column;
     }
@@ -76,8 +56,4 @@
     .user-note {
         width: 100%;
     }
-    .work-note {
-        width: 100%;
-    }
-
 }

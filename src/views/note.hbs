@@ -1,8 +1,18 @@
 <main>
-    <div class="notepad-body">
-        <div class="notepad">
-            <div class="top">Lexie</div>
-            <textarea id="paper" cols="30" rows="10"></textarea>
+    <div class="note-section">
+        <div class="form">
+            <form action="/notes/note" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <label for="name">Description</label>
+                <textarea id="name" name="description"></textarea>
+                <select id="type-related" name="typeRelated">
+                    <option value="1">Personal</option>
+                    <option value="2">Work</option>
+                </select>
+                <input type="date" value="Date">
+                <input type="submit" value="Create">
+            </form>
         </div>
     </div>
 </main>
