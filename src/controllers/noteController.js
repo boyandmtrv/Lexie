@@ -3,7 +3,6 @@ const router = require('express').Router();
 const noteManager = require('../managers/noteManager');
 
 router.get('/note', (req, res) => {
-    console.log(noteManager.getAll());
     res.render('note');
 });
 
@@ -20,7 +19,7 @@ router.post('/note', (req, res) => {
         name,
         description,
         typeRelated,
-        date: Number(date)
+        date
     });
 
     res.redirect('/records')
