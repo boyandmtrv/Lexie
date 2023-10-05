@@ -1,8 +1,9 @@
 const router = require('express').Router();
+const { isAuth } = require('../middlewares/authMiddleware');
 
 const noteManager = require('../managers/noteManager');
 
-router.get('/note', (req, res) => {
+router.get('/note', isAuth, (req, res) => {
     res.render('notes/note');
 });
 

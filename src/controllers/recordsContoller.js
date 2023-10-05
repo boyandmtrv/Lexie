@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const noteManager = require('../managers/noteManager')
+const noteManager = require('../managers/noteManager');
+const { isAuth } = require('../middlewares/authMiddleware');
 
-router.get('/records', async (req, res) => {
+router.get('/records', isAuth, async (req, res) => {
 
     const { search, from, to } = req.query;
 
