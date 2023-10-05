@@ -5,6 +5,7 @@
 @import url(note.css);
 @import url(create.css);
 @import url(records.css);
+@import url(register.css);
 
 * {
     margin: 0;
