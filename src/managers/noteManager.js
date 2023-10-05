@@ -28,3 +28,7 @@ exports.create = async (noteData) => {
 
     return note;
 };
+
+exports.update = (noteId, noteData) => Note.findByIdAndUpdate(noteId, noteData);
+
+exports.delete = (noteId) => Note.findByIdAndDelete(noteId);

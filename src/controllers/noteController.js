@@ -37,8 +37,27 @@ router.get('/:noteId/details', async (req, res) => {
 });
 
 router.get('/:noteId/delete', async (req, res) => {
-    const note = await noteManager.getOne(req.params.noteId).lean()
+    const note = await noteManager.getOne(req.params.noteId).lean();
     res.render('notes/delete', { note })
 })
+
+router.post('/:noteId/delete', async (req, res) => {
+    await noteManager.delete(req.params.noteId);
+
+    res.redirect('/records')
+});
+
+router.get('/:noteId/edit', async (req, res) => {
+    const note = await noteManager.getOne(req.params.noteId).lean();
+    res.render('notes/edit', { note })
+})
+
+router.post('/:noteId/edit', async (req, res) => {
+    const noteData = req.body;
+
+    await noteManager.update(req.params.noteId, noteData);
+
+    res.redirect(`/notes/${req.params.noteId}/details`)
+});
 
 module.exports = router;
