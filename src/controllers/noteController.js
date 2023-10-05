@@ -20,7 +20,8 @@ router.post('/note', async (req, res) => {
         name,
         description,
         typeRelated,
-        date
+        date,
+        owner: req.user._id
     });
 
     res.redirect('/records')
