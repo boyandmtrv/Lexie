@@ -1,23 +1,7 @@
-const uniqid = require('uniqid');
-const notes = [
-    {
-        id: 'v5l7e8clnbqntn0',
-        name: 'Cube 1',
-        description: 'Something random here',
-        typeRelated: 'personal',
-        date: 2022-1-10
-    },
-    {
-        id: 'v5l7e8clnbqntn0',
-        name: 'Cube 2',
-        description: 'Something here here here',
-        typeRelated: 'work',
-        date: 2023-10-12
-    },
-];
+const Note = require('../models/Note');
 
-exports.getAll = (search, from, to) => {
-    let result = notes.slice();
+exports.getAll = async (search, from, to) => {
+    let result = await Note.find().lean();
 
     if (search) {
         result = result.filter(note => note.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
@@ -34,16 +18,13 @@ exports.getAll = (search, from, to) => {
     return result;
 }
 
-exports.getOne = (noteId) => notes.find(n => n.id == noteId);
+exports.getOne = (noteId) => Note.findById(noteId);
 
-exports.create = (noteData) => {
+exports.create = async (noteData) => {
     
-    const newNote = {
-        id: uniqid(),
-        ...noteData
-    };
+    const note = new Note(noteData);
 
-    notes.push(newNote);
+    await note.save();
 
-    return newNote;
+    return note;
 };

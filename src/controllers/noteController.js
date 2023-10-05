@@ -6,7 +6,7 @@ router.get('/note', (req, res) => {
     res.render('note');
 });
 
-router.post('/note', (req, res) => {
+router.post('/note', async (req, res) => {
     console.log(req.body);
     const {
         name,
@@ -15,7 +15,7 @@ router.post('/note', (req, res) => {
         date
     } = req.body;
 
-    noteManager.create({
+    await noteManager.create({
         name,
         description,
         typeRelated,
@@ -25,11 +25,11 @@ router.post('/note', (req, res) => {
     res.redirect('/records')
 });
 
-router.get('/:noteId/details', (req, res) => {
-    const note = noteManager.getOne(req.params.noteId);
+router.get('/:noteId/details', async (req, res) => {
+    const note = await noteManager.getOne(req.params.noteId).lean();
 
     if (!note) {
-        return res.redirect('/404');    
+        return res.redirect('/404');
     };
 
     res.render('details', { note });
