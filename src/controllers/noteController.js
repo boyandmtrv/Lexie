@@ -3,6 +3,7 @@ const router = require('express').Router();
 const noteManager = require('../managers/noteManager');
 
 router.get('/note', (req, res) => {
+    console.log(req.user);
     res.render('note');
 });
 
