@@ -33,7 +33,9 @@ router.get('/:noteId/details', async (req, res) => {
         return res.redirect('/404');
     };
 
-    res.render('notes/details', { note });
+    const isOwner = note.owner?.toString() === req.user._id;
+
+    res.render('notes/details', { note, isOwner });
 });
 
 router.get('/:noteId/delete', async (req, res) => {
@@ -46,6 +48,7 @@ router.post('/:noteId/delete', async (req, res) => {
 
     res.redirect('/records')
 });
+
 
 router.get('/:noteId/edit', async (req, res) => {
     const note = await noteManager.getOne(req.params.noteId).lean();

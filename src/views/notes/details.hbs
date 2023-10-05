@@ -1,15 +1,15 @@
 <main>
     <div class="details-section">
-        {{#with note}}
-        <h1>{{name}}</h1>
+        <h1>{{note.name}}</h1>
         <div class="details">
-            <p><span>Description: </span>{{description}}</p>
-            <p><span>Type: </span>{{typeRelated}}</p>
-            <p><span>Date: </span>{{date}}</p>
+            <p><span>Description: </span>{{note.description}}</p>
+            <p><span>Type: </span>{{note.typeRelated}}</p>
+            <p><span>Date: </span>{{note.date}}</p>
             <a class="btn" href="/records">Back</a>
+            {{#if isOwner}}
             <a class="btn" href="/notes/{{_id}}/edit">Edit</a>
             <a class="btn" href="/notes/{{_id}}/delete ">Delete</a>
+            {{/if}}
         </div>
-        {{/with}}
     </div>
 </main>
