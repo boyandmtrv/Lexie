@@ -1,0 +1,13 @@
+<main>
+    <div class="details-section">
+        {{#with note}}
+        <h1>{{name}}</h1>
+        <div class="details">
+            <p><span>Description: </span>{{description}}</p>
+            <p><span>Type: </span>{{typeRelated}}</p>
+            <p><span>Date: </span>{{date}}</p>
+            <a class="btn" href="/records">Back</a>
+        </div>
+        {{/with}}
+    </div>
+</main>

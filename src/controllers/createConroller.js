@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/create', (req, res) => {
-    res.render('notes/create')
+    res.render('create')
 });
 
 module.exports = router;

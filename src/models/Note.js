@@ -4,11 +4,7 @@ const noteSchema = new mongoose.Schema({
     name: String,
     description: String,
     typeRelated: String,
-    date: String,
-    owner: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User'
-    }
+    date: String
 });
 
 const Note = mongoose.model('Note', noteSchema);

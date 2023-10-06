@@ -1,18 +1,17 @@
 <main>
     <div class="note-section">
-        <h1>Edit your note</h1>
         <div class="form">
-            <form method="POST">
+            <form action="/notes/note" method="POST">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" value="{{note.name}}">
+                <input type="text" id="name" name="name">
                 <label for="name">Description</label>
-                <input id="name" name="description" value="{{note.description}}">
+                <textarea id="name" name="description"></textarea>
                 <select id="type-related" name="typeRelated">
                     <option value="personal">Personal</option>
                     <option value="work">Work</option>
                 </select>
-                <input type="date" value="{{note.date}}" name="date">
-                <input type="submit" value="Save">
+                <input type="date" value="Date" name="date">
+                <input type="submit" value="Create">
             </form>
         </div>
     </div>
