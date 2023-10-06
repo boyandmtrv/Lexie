@@ -1,6 +1,7 @@
 const router = require('express').Router();
 
 const noteManager = require('../managers/noteManager');
+const { generateOptions } = require('../uitls/viewHelpers');
 
 router.get('/note', (req, res) => {
     res.render('record/note');
@@ -48,10 +49,13 @@ router.post('/:noteId/delete', async (req, res) => {
     res.redirect('/records')
 });
 
+
 router.get('/:noteId/edit', async (req, res) => {
     const note = await noteManager.getOne(req.params.noteId).lean();
 
-    res.render('record/edit', { note })
+    const options = generateOptions(note.typeRelated);
+
+    res.render('record/edit', { note, options })
 });
 
 router.post('/:noteId/edit', async (req, res) => {

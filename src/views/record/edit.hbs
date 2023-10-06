@@ -8,8 +8,11 @@
                 <label for="name">Description</label>
                 <textarea id="description" name="description">{{note.description}}</textarea>
                 <select id="type-related" name="typeRelated">
-                    <option value="personal">Personal</option>
-                    <option value="work">Work</option>
+                    {{#each options}}
+                    <option value="{{value}}" {{#if selected}}selected{{/if}}>{{title}}</option>
+                    {{/each}}
+                    {{!-- <option value="personal">Personal</option>
+                    <option value="work">Work</option> --}}
                 </select>
                 <input type="date" value="{{note.date}}" name="date">
                 <input type="submit" value="Create">
