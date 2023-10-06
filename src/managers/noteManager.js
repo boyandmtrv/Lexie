@@ -20,11 +20,13 @@ exports.getAll = async (search, from, to) => {
 
 exports.getOne = (noteId) => Note.findById(noteId);
 
-exports.create = async (noteData) => {
+exports.create = (noteData) => {
     
     const note = new Note(noteData);
 
-    await note.save();
-
-    return note;
+    return note.save();
 };
+
+exports.update = (noteId, noteData) => Note.findByIdAndUpdate(noteId, noteData);
+
+exports.delete = (noteId) => Note.findByIdAndDelete(noteId);
