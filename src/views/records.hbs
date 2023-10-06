@@ -5,6 +5,7 @@
         <input type="date" name="to" class="date" value="{{to}}" placeholder="To Date">
         <input type="submit" value="search">
     </form>
+    {{!-- {{#if isOwner}} --}}
     <div class="record-section">
         {{#each notes}}
             {{>noteCard}}
@@ -12,4 +13,5 @@
             <p>There are no notes yet</p>
         {{/each}}
     </div>
+    {{!-- {{/if}} --}}
 </main>

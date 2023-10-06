@@ -13,7 +13,9 @@
         </nav>
         <div class="heading">
             <h1>Lexie,</h1>
-            <p><i class='bx bx-dots-vertical' ></i><span>Where every idea finds its cozy home</span><i class='bx bx-dots-vertical' ></i><br>Simplifying note-taking, one thought at a time. Write, remember, improve.</p>
+            <p><i class='bx bx-dots-vertical'></i><span>Where every idea finds its cozy home</span><i
+                    class='bx bx-dots-vertical'></i><br>Simplifying note-taking, one thought at a time. Write, remember,
+                improve.</p>
             <li><a href="/">Learn more</a></li>
         </div>
     </div>
@@ -37,9 +39,14 @@
         </div>
         <div class="right-bottom">
             <div class="box-text-bottom">
+                {{#if isAuthenticated}}
+                <h1>It seems that you are already logged in</h1>
+                <li><a href="/dashboard">Proceed further</a></li>
+                {{else}}
                 <h1>Would you like to try Lexie?</h1>
                 <li><a href="/users/register">Sign up</a></li>
                 <li><a href="/users/login">Login</a></li>
+                {{/if}}
             </div>
         </div>
     </div>

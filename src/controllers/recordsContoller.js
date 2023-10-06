@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const noteManager = require('../managers/noteManager')
+const noteManager = require('../managers/noteManager');
 
 router.get('/records', async (req, res) => {
 
@@ -10,4 +10,4 @@ router.get('/records', async (req, res) => {
     res.render('records', { notes, search, from, to })
 });
 
-module.exports = router;
+module.exports = router; 

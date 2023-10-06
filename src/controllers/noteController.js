@@ -1,14 +1,15 @@
 const router = require('express').Router();
-
+const { isAuth } = require('../middlewares/authMiddleware');
 const noteManager = require('../managers/noteManager');
 const { generateOptions } = require('../uitls/viewHelpers');
 
+router.use(isAuth)
+
 router.get('/note', (req, res) => {
-    res.render('record/note');
+    res.render('record/note',);
 });
 
 router.post('/note', async (req, res) => {
-    console.log(req.body);
     const {
         name,
         description,
@@ -26,6 +27,7 @@ router.post('/note', async (req, res) => {
 
     res.redirect('/records')
 });
+
 
 router.get('/:noteId/details', async (req, res) => {
     const note = await noteManager.getOne(req.params.noteId).lean();
