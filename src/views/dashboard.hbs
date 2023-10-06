@@ -1,5 +1,4 @@
 <main>
-    {{#if isAuthenticated}}
     <div class="left-side">
         <div class="dash-nav">
             <ul class="dash-li">
@@ -7,7 +6,7 @@
             </ul>
         </div>
         <div class="dash-title">
-            <h1>Welcome {{user.username}}</h1>
+            <h1>Welcome, {{USER}}</h1>
             <p>Here, you can seamlessly organize and manage all your notes with Lexi's intuitive navigation and
                 personalized organization features.</p>
         </div>
@@ -42,5 +41,4 @@
             </ul>
         </div>
     </div>
-    {{/if}}
 </main>
