@@ -3,7 +3,7 @@ const router = require('express').Router();
 const noteManager = require('../managers/noteManager');
 
 router.get('/note', (req, res) => {
-    res.render('note');
+    res.render('record/note');
 });
 
 router.post('/note', async (req, res) => {
@@ -33,7 +33,13 @@ router.get('/:noteId/details', async (req, res) => {
         return res.redirect('/404');
     };
 
-    res.render('details', { note });
+    res.render('record/details', { note });
+});
+
+router.get('/:noteId/delete', async (req, res) => {
+    const note = await noteManager.getOne(req.params.noteId).lean();
+
+    res.render('record/delete', { note });
 });
 
 module.exports = router;
