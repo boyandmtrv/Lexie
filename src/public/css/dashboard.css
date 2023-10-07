@@ -1,17 +1,14 @@
 .left-side {
     position: relative;
-    width: 70%;
+    width: 95%;
     height: 100%;
-    background-color: white;
+    background-color: #fff;
 }
 
 .right-side {
-    width: 30%;
+    width: 5%;
     height: 100%;
-    background-color: aquamarine;
-    background-image: url('/images/hand.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #f0f0f0;
 }
 
 .dash-nav {
@@ -66,7 +63,7 @@
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, .5);
     border-bottom: 1px solid rgba(255, 255, 255, .3);
-    border-left: 1px solid #ccc;
+    border-left: 1px solid rgba(235, 235, 235, 0.849);
 
 }
 
@@ -97,7 +94,7 @@
 .main-nav ul li a .icon {
     position: relative;
     line-height: 50px;
-    font-size: 30px;
+    font-size: 25px;
     opacity: 0;
     transform: scale(0);
     transition: opacity .5s ease-in, transform .5s ease; 
@@ -107,11 +104,10 @@
 
 .main-nav ul li a .text {
     position: absolute;
-    font-size: 12px;
     color: #000;
     top: 50px;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     text-transform: uppercase;;
     opacity: 0;
     transform: scale(0);
@@ -170,16 +166,18 @@
 @media(max-width: 1080px) {
     main .left-side {
         width: 100%;
+        height: 90%;
     }
 
     main .right-side {
         width: 100%;
+        height: 10%;
     }
 
     main .dash-title h1 {
-        margin-top: 50px;
-        margin-left: 20px;
-        font-size: 50px;
+        /* margin-top: 50px; */
+        margin-left: 500px;
+        font-size: 60px;
     }
 
     .dash-nav a{
@@ -188,12 +186,39 @@
 
     .dash-title p {
         font-size: 20px;
-        margin-left: 20px;
+        margin-left: 500px;
+
 
     }
 
-    .main-nav ul  {
-        margin-top: 50px;
+    .main-nav {
+        border-top: 1px solid rgba(235, 235, 235, 0.849);
+    }
+
+    .main-nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+        flex-direction: row;
+        align-items: center; 
+        padding-top: 40px;
+    }
+
+    .main-nav ul li a{
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        padding: 5px 30px;
+
+    }
+
+    .main-nav ul li a .icon {
+       
     }
     
+    .main-nav ul li a .text {
+        font-size: 13px;
+    }
 }
