@@ -16,7 +16,7 @@
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 <input type="submit" class="submit-btn" value="Register">
-                 <div class="register-link">
+                <div class="register-link">
                     <p>
                         Already registered?
                         <a href="/users/login">Login</a>
@@ -25,4 +25,9 @@
             </form>
         </div>
     </div>
+    {{#each errorMessages}}
+    <div class="notification">
+        <p class="notification-message">{{this}}</p>
+    </div>
+    {{/each}}
 </main>

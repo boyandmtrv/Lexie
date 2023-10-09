@@ -12,13 +12,18 @@
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 <input type="submit" class="submit-btn" value="Login">
-                 <div class="register-link">
+                <div class="register-link">
                     <p>
                         Don't have an account?
                         <a href="/users/register">Register</a>
                     </p>
                 </div>
             </form>
+             {{#if errorMessage}}
+            <div class="notification">
+                <p class="notification-message">{{errorMessage}}</p>
+            </div>
+            {{/if}}
         </div>
     </div>
 </main>

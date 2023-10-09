@@ -79,3 +79,14 @@
 .register p a :hover {
     text-decoration: underline;
 }
+
+.notification {
+    padding-top: 20px;
+    color:#fff;
+    border-radius: 10px;
+    width: 50%;
+    height: 50px;
+    justify-content: center;
+    background-color: rgba(231, 118, 118);
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { isAuth } = require('../middlewares/authMiddleware');
 const noteManager = require('../managers/noteManager');
-const { generateOptions } = require('../uitls/viewHelpers');
+const { generateOptions } = require('../utils/viewHelpers');
 
 router.use(isAuth)
 
