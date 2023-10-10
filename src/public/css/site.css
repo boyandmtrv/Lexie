@@ -6,6 +6,8 @@
 @import url(records.css);
 @import url(register.css);
 @import url(login.css);
+@import url(details.css);
+@import url(edit.css);
 
 * {
     margin: 0;

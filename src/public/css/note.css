@@ -21,7 +21,7 @@ textarea {
     font-size: 40px;
     box-sizing: border-box;
     border: none;
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid black;
     outline: none;
     font-weight: 800;
 }
@@ -74,11 +74,4 @@ textarea {
     color: black;
     cursor: pointer;
     outline: none;
-
 }
-
-.submit-container input[type="submit"]:hover {
-    /* background-color: #0056b3; */
-}
-
-
