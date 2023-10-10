@@ -1,15 +1,29 @@
 <main>
-    <div class="details-section">
-        {{#with note}}
-        <h1>{{name}}</h1>
-        <div class="details">
-            <p><span>Description: </span>{{description}}</p>
-            <p><span>Type: </span>{{typeRelated}}</p>
-            <p><span>Date: </span>{{date}}</p>
-            <a class="btn" href="/records">Back</a>
-            <a class="btn" href="/notes/{{_id}}/edit">Edit</a>
-            <a class="btn" href="/notes/{{_id}}/delete">Delete</a>
+    <div class="note-section">
+        <div class="note-form">
+            {{#with note}}
+            <input type="text" id="name" name="name" placeholder="{{name}}">
+            <textarea id="description" name="description">{{description}}</textarea>
+            <div class="options">
+                <p>{{typeRelated}}</p>
+                <input type="date" value="{{date}}" name="date">
+                <div class="submit-container">
+                    <a class="btn" href="/records">Back</a>
+                    <a class="btn" href="/notes/{{_id}}/edit">Edit</a>
+                    <a class="btn" href="/notes/{{_id}}/delete">Delete</a>
+                </div>
+            </div>
+
+            {{!-- <div class="details">
+                <div class="options">
+                    <p><span>Description: </span>{{description}}</p>
+                    <p><span>Type: </span>{{typeRelated}}</p>
+                    <p><span>Date: </span>{{date}}</p>
+                    <a class="btn" href="/records">Back</a>
+                    <a class="btn" href="/notes/{{_id}}/edit">Edit</a>
+                    <a class="btn" href="/notes/{{_id}}/delete">Delete</a>
+                </div> --}}
+                {{/with}}
+            </div>
         </div>
-        {{/with}}
-    </div>
 </main>
