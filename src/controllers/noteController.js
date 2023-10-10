@@ -65,7 +65,7 @@ router.post('/:noteId/edit', async (req, res) => {
 
     await noteManager.update(req.params.noteId, noteData);
 
-    res.redirect(`/notes/${req.params.noteId}/details`)
+    res.redirect(`/records`)
 });
 
 module.exports = router;
