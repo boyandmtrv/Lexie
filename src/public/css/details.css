@@ -1,6 +1,6 @@
 .details-options {
     display: flex;
-    justify-content: flex-start; /* Adjusted to start from the left */
+    justify-content: flex-start; 
     align-items: center;
     width: 100%;
     margin-top: 30px;
@@ -45,4 +45,24 @@ input[type="date"] {
     outline: none;
     margin-right: 10px;
     text-decoration: none;
+}
+
+.dash-nav {
+    position: absolute;
+    top: -5%;
+}
+
+.dash-li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dash-li a {
+    text-decoration: none;
+    color: black;
+}
+
+.bx.bxs-chevrons-left {
+    font-size: 35px; /* Adjust the font size as needed */
 }

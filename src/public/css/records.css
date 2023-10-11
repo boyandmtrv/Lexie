@@ -1,3 +1,20 @@
-.record-section {
-    display: block;
+.top-record {
+    display: flex;
+    width: 100%;
+}
+
+.top-record-bar {
+    display: flex;
+    align-items: center;
+    width: 60%; 
+    padding: 20px 30px;
+}
+
+.top-record-bar input {
+    margin-right: 10px; 
+    width: 60vw;
+}
+
+.date {
+    width: 40%; 
 }

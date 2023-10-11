@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 
-input[type="text"],
+input#name,
 textarea {
     font-family: 'Raleway', sans-serif;
     display: flex;
@@ -75,10 +75,6 @@ textarea {
     cursor: pointer;
     outline: none;
 
-}
-
-.submit-container input[type="submit"]:hover {
-    /* background-color: #0056b3; */
 }
 
 

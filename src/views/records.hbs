@@ -1,17 +1,23 @@
 <main>
-    <form action="/records" method="GET">
-        <input type="text" class="search" value="{{search}}" name="search" placeholder="Search...">
-        <input type="date" name="from" class="date" value="{{from}}" placeholder="From Date">
-        <input type="date" name="to" class="date" value="{{to}}" placeholder="To Date">
-        <input type="submit" value="search">
-    </form>
+    <div class="top-record">
+        <div class="top-record-bar">
+            <form action="/records" method="GET">
+                <input type="text" class="search" value="{{search}}" name="search" placeholder="Search...">
+                <input type="date" name="from" class="date" value="{{from}}" placeholder="From Date">
+                <input type="date" name="to" class="date" value="{{to}}" placeholder="To Date">
+                <input type="submit" value="search">
+            </form>
+        </div>
+    </div>
     {{!-- {{#if isOwner}} --}}
     <div class="record-section">
+        <div class="record-note"></div>
         {{#each notes}}
-            {{>noteCard}}
+        {{>noteCard}}
         {{else}}
-            <p>There are no notes yet</p>
+        <p>There are no notes yet</p>
         {{/each}}
+        </div>
     </div>
     {{!-- {{/if}} --}}
 </main>
