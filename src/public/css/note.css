@@ -77,4 +77,14 @@ textarea {
 
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #E1E1E0, #ffffff, #ffffff, #ffffff, #ffffff);
+    border-radius: 10px;
+}
+
+
 
