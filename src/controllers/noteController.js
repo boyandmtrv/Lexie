@@ -25,7 +25,15 @@ router.post('/note', async (req, res) => {
         owner: req.user._id
     });
 
-    res.redirect('/records')
+    res.redirect('/notes/records')
+});
+
+router.get('/records', async (req, res) => {
+    const { search, from, to } = req.query;
+
+    const notes = await noteManager.getAll(search, from, to, req.user._id);
+
+    res.render('record/records', { notes, search, from, to });
 });
 
 
@@ -48,7 +56,7 @@ router.get('/:noteId/delete', async (req, res) => {
 router.post('/:noteId/delete', async (req, res) => {
     await noteManager.delete(req.params.noteId);
 
-    res.redirect('/records')
+    res.redirect('/notes/records')
 });
 
 
