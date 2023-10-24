@@ -1,15 +1,13 @@
 .left {
-    position: relative;
-    width: 40%;
-    height: 100%;
-    background-color: #FFFFFF;
+    width: 100%;
+    height: 50%;
 }
 
 .left-nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
-    padding: 20px 30px;
+    padding: 50px 40px;
 }
 
 .left-nav i {
@@ -18,7 +16,6 @@
 
 .left-nav-right {
     display: flex;
-    align-items: center;
 }
 
 .left-nav-right ul {
@@ -47,14 +44,20 @@
 }
 
 .heading h1 {
-    font-size: 100px;
+    font-size: 180px;
     font-weight: 900;
     border-right: 5px solid #dfdfdf;
-    width: 75%;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 1.5s ,
         cursor .5s step-end infinite alternate;
+}
+
+.heading-p {
+    font-size: 20px;
+    width: 100%;
+    margin-left: 100px;
 }
 
 @keyframes cursor {
@@ -69,108 +72,30 @@
     }
 }
 
-.heading p {
-    opacity: .6;
-    font-size: 20px;
-    line-height: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 
-.heading span {
-    color: #000;
-    font-weight: 800;
-}
-
-.heading a {
-    text-decoration: none;
-    color: #000;
-    border-bottom: 1px solid black;
-    padding-bottom: 5px;
-    font-size: 13px;
-    font-weight: 600;
-    opacity: .6;
-}
-
-.right {
-    width: 60%;
-    height: 100%;
-    background-image: url('/images/organize.jpeg');
-    background-size: cover;
-    background-position: center;
-}
-
-.right-top {
-    display: flex;
-    width: 100%;
-    height: 50%;
-    background-color: #eaf6f698;
-
-}
-
-.right-bottom {
-    position: relative;
-    width: 100%;
-    height: 50%;
-    background-color: #eaf6f698;
-    color: #fff;
-}
-
-.right-top-left {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    border-right: 1px solid #cecece9f;
-}
-
-.right-top-right {
-    position: relative;
-    width: 50%;
-    height: 100%;
-}
-
-.right-top-left,
-.right-top-right {
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, .5);
-    border-bottom: 1px solid rgba(255, 255, 255, .3);
-}
-
-.box-text-left,
-.box-text-right,
 .box-text-bottom {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.box-text-left,
-.box-text-right {
-    padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.504);
-}
 
-.box-text-bottom {
-    text-align: center;
-    color: #000;
-    margin-top: 20px;
-}
 
 .box-text-bottom li {
     margin-top: 20px;
     padding-top: 10px;
-    font-size: 18px; 
-    width: 100px;
+    font-size: 20px; 
+    width: 120px;
     height: 40px;
-    background-color: #eaf6f698; 
+    background-color: #cccccc98; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block; 
     text-align: center;
     list-style: none;
-    margin-right: 10px;
+    margin-left: 20px;
 }
 
 .sign-up {

@@ -3,9 +3,6 @@
         <nav class="left-nav">
             <div class="left-nav-right">
                 <ul class="menu">
-                    {{!-- <li><a href="/">Link1</a></li>
-                    <li><a href="/">Link1</a></li>
-                    <li><a href="/">Link1</a></li> --}}
                     <li><a href="/"><i class='bx bxl-github'></i></a></li>
                     <li><a href="/"><i class='bx bxl-linkedin-square'></i></a></li>
                 </ul>
@@ -13,40 +10,16 @@
         </nav>
         <div class="heading">
             <h1>Lexie,</h1>
-            <p></i><span>Where every idea finds its cozy home</span><br>Simplifying note-taking, one thought at a time. Write, remember,
-                improve.</p>
-            <li><a href="/">Learn more</a></li>
+            <p class="heading-p">Your personal note assistant</p>
         </div>
-    </div>
-    <div class="right">
-        <div class="right-top">
-            <div class="right-top-left">
-                <div class="box-text-left">
-                    <h1>Retrieve with Ease</h1>
-                    {{!-- <p>Lexie is your creative sanctuary. It's the place where your ideas are born, nurtured,
-                        and set free into the world. Imagine a canvas where every stroke of your imagination finds a
-                        perfect home.</p> --}}
-                </div>
-            </div>
-            <div class="right-top-right">
-                <div class="box-text-right">
-                    <h1>Thoughts and Ideas</h1>
-                    {{!-- <p>Lexie stays with you wherever you go. Access your notes anytime, anywhere, while resting
-                        easy knowing your thoughts are safely stored and accessible only to you.</p> --}}
-                </div>
-            </div>
-        </div>
-        <div class="right-bottom">
-            <div class="box-text-bottom">
+        <div class="box-text-bottom">
                 {{#if isAuthenticated}}
                 <h1>It seems that you are already logged in</h1>
                 <li><a href="/dashboard" class="sign-up">Proceed</a></li>
                 {{else}}
-                <h1>Would you like to try Lexie?</h1>
                 <li><a href="/users/register" class="sign-up">Sign up</a></li>
                 <li><a href="/users/login" class="sign-up">Login</a></li>
                 {{/if}}
             </div>
-        </div>
-    </div>
+    </div>            
 </main>
