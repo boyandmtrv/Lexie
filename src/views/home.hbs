@@ -10,16 +10,20 @@
         </nav>
         <div class="heading">
             <h1>Lexie,</h1>
+            {{#if isAuthenticated}}
+            <p class="heading-p">You are already logged in...</p>
+            {{else}}
             <p class="heading-p">Your personal note assistant</p>
+            {{/if}}
         </div>
         <div class="box-text-bottom">
-                {{#if isAuthenticated}}
-                <h1>It seems that you are already logged in</h1>
-                <li><a href="/dashboard" class="sign-up">Proceed</a></li>
-                {{else}}
-                <li><a href="/users/register" class="sign-up">Sign up</a></li>
-                <li><a href="/users/login" class="sign-up">Login</a></li>
-                {{/if}}
-            </div>
-    </div>            
+            {{#if isAuthenticated}}
+            <li><a href="/dashboard" class="sign-up">Proceed</a></li>
+            {{else}}
+            <li><a href="/users/register" class="sign-up">Get Started</a></li>
+            {{!-- <li><a href="/users/register" class="sign-up">Sign up</a></li>
+            <li><a href="/users/login" class="sign-up">Login</a></li> --}}
+            {{/if}}
+        </div>
+    </div>
 </main>

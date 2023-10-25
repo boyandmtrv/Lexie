@@ -84,18 +84,17 @@
 
 .box-text-bottom li {
     margin-top: 20px;
-    padding-top: 10px;
-    font-size: 20px; 
+    padding-top: 15px;
+    font-size: 15px; 
     width: 120px;
     height: 40px;
-    background-color: #cccccc98; 
+    background-color: #dadada98; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block; 
     text-align: center;
     list-style: none;
-    margin-left: 20px;
 }
 
 .sign-up {
