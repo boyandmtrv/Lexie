@@ -1,9 +1,5 @@
 .main-auth-page {
-    margin: 0;
-    padding: 0;
     height: 100vh;
-    background-color: aqua;
-    overflow: hidden;
 }
 
 .form {
@@ -12,7 +8,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-    background-color: aliceblue;
+    background-color: #fff;
     border-radius: 10px;
     padding-top: 20px;
 }
@@ -20,6 +16,7 @@
 .form h1 {
     text-align: center;
     padding: 0 0 20px 0;
+    font-size: 50px;
 }
 
 .form form {
@@ -29,7 +26,7 @@
 
 .form .input-box {
     position: relative;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.425);
     margin: 30px 0;
 }
 
@@ -37,39 +34,64 @@
     width: 100%;
     padding: 0 5px;
     height: 40px;
-    font-size: 16px;
+    font-size: 25px;
     border: none;
     background: none;
     outline: none;
 }
+.input-box input::placeholder {
+    color: rgba(10, 4, 4, 0.199);
+}
 
-.input-box label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    color: black;
-    transform: translateY(-50%);
+.submit-btn {
+    width: 50%;
+    height: 50px;
+    border: 1px solid rgba(224, 224, 224, 0.425);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+    margin-left: 80px;
+}
+
+.submit-btn:hover {
+    border-color: #fff;
+    transition: 0.5s;
+    background-color: rgba(201, 201, 201, 0.5);
+}
+
+
+.register-link {
+    margin:  30px 0;
+    text-align: center;
     font-size: 16px;
-    pointer-events: none;
-    transition: .5s;
+    color: #666666;
+    font-size: 20px;
 }
 
-.input-box span::before {
-    content: '';
+.register-link a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.notification {
+    background-color: #ff3838c5;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
     position: absolute;
-    top: 40px;
+    top: 0;
     left: 0;
-    width: 0;
-    height: 2px;
-    background: rgb(22, 190, 92);
-}
-
-.input-box input:focus ~ label{
-    top: -5px;
-    color: rgb(199, 199, 199);
-}
-
-.input-box input:focus ~ span{
-    color: rgb(49, 16, 16);
     width: 100%;
+    transition: top 0.5s;
+}
+
+.notification.active {
+    top: 20px; 
 }

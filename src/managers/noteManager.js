@@ -1,19 +1,7 @@
 const Note = require('../models/Note');
 
-exports.getAll = async (search, from, to, userId) => {
+exports.getAll = async (userId) => {
     let result = await Note.find({ owner: userId }).lean();
-
-    if (search) {
-        result = result.filter(note => note.name.toLowerCase().includes(search.toLowerCase()));
-    }
-
-    if (from) {
-        result = result.filter(note => note.date >= from);
-    }
-
-    if (to) {
-        result = result.filter(note => note.date <= to);
-    }
 
     return result;
 }

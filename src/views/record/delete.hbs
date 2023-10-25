@@ -1,10 +1,16 @@
 <main>
-    <h1>Are you sure you want to delete</h1>
-    <div class="form">
-        <form method="POST">
-            <input type="text" id="name" name="name" value="{{note.name}}" disabled="true">
-            <input type="submit" value="Delete">
-            <a class="btn" href="/notes/records">Back</a>
-        </form>
+    <div class="dash-nav">
+        <ul class="dash-li">
+            <li><a href="/notes/records"><i class='bx bxs-chevrons-left'></i></a></li>
+        </ul>
     </div>
-</main> 
+    <div class="confirmation-form">
+        <h1 class="confirmation">Are you sure you want to delete:</h1>
+        <div class="form-confirm">
+            <form method="POST">
+                <input type="text" id="name" name="name" value="{{note.name}}" disabled="true">
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+    </div>
+</main>

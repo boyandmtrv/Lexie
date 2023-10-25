@@ -6,7 +6,7 @@ const { generateOptions } = require('../utils/viewHelpers');
 router.use(isAuth)
 
 router.get('/note', (req, res) => {
-    res.render('record/note',);
+    res.render('record/note');
 });
 
 router.post('/note', async (req, res) => {
@@ -29,11 +29,10 @@ router.post('/note', async (req, res) => {
 });
 
 router.get('/records', async (req, res) => {
-    const { search, from, to } = req.query;
 
-    const notes = await noteManager.getAll(search, from, to, req.user._id);
+    const notes = await noteManager.getAll(req.user._id);
 
-    res.render('record/records', { notes, search, from, to });
+    res.render('record/records', { notes });
 });
 
 
