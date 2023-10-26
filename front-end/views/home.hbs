@@ -1,0 +1,29 @@
+<main class="main">
+    <div class="left">
+        <nav class="left-nav">
+            <div class="left-nav-right">
+                <ul class="menu">
+                    <li><a href="https://github.com/boyandmtrv"><i class='bx bxl-github'></i></a></li>
+                    <li><a href="/"><i class='bx bxl-linkedin-square'></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="heading">
+            <h1>Lexie,</h1>
+            {{#if isAuthenticated}}
+            <p class="heading-p">You are already logged in...</p>
+            {{else}}
+            <p class="heading-p">Your personal note assistant</p>
+            {{/if}}
+        </div>
+        <div class="box-text-bottom">
+            {{#if isAuthenticated}}
+            <li><a href="/dashboard" class="sign-up">Proceed</a></li>
+            {{else}}
+            <li><a href="/users/register" class="sign-up">Get Started</a></li>
+            {{!-- <li><a href="/users/register" class="sign-up">Sign up</a></li>
+            <li><a href="/users/login" class="sign-up">Login</a></li> --}}
+            {{/if}}
+        </div>
+    </div>
+</main>

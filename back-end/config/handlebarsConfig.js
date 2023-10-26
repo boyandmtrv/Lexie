@@ -6,7 +6,7 @@ function handlebarsConfig(app) {
     }));
     
     app.set('view engine', 'hbs');
-    app.set('views', 'src/views');
+    app.set('views', 'front-end/views');
 };
 
 module.exports = handlebarsConfig;
