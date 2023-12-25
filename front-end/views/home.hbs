@@ -1,29 +1,30 @@
 <main class="main">
-    <div class="left">
-        <nav class="left-nav">
-            <div class="left-nav-right">
-                <ul class="menu">
-                    <li><a href="https://github.com/boyandmtrv"><i class='bx bxl-github'></i></a></li>
-                    <li><a href="/"><i class='bx bxl-linkedin-square'></i></a></li>
-                </ul>
-            </div>
+    <header class="header">
+        <a href="/">
+            <img src="./images/logoL.png" alt="logo" class="logo">
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu-alt-right' id="menu-icon"></i>
+            <i class='bx bx-menu-alt-left' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="/users/login" style="--i:0;">Login</a>
+            <a href="/users/register" style="--i:1;">Register</a>
+            <a href="/about" style="--i:2;">About</a>
         </nav>
-        <div class="heading">
-            <h1>Lexie,</h1>
-            {{#if isAuthenticated}}
-            <p class="heading-p">You are already logged in...</p>
-            {{else}}
-            <p class="heading-p">Your personal note assistant</p>
-            {{/if}}
-        </div>
-        <div class="box-text-bottom">
-            {{#if isAuthenticated}}
-            <li><a href="/dashboard" class="sign-up">Proceed</a></li>
-            {{else}}
-            <li><a href="/users/register" class="sign-up">Get Started</a></li>
-            {{!-- <li><a href="/users/register" class="sign-up">Sign up</a></li>
-            <li><a href="/users/login" class="sign-up">Login</a></li> --}}
-            {{/if}}
-        </div>
+    </header>
+    <div class="content">
+        <h1>Le<span>x</span>ie</h1>
+        <p>Your personalized notes assistant</p>
+        <a href="/users/register">Get Started</a>
     </div>
+    <div class="rightSide">
+        <h1 class="headingRight">
+            <span>progress</span><br />
+            <span>thoughts</span><br />
+            <span>yourself</span>
+        </h1>
+    </div>
+
 </main>
