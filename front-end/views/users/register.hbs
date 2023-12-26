@@ -1,5 +1,5 @@
 <main>
-    <header class="header">
+     <header class="header">
         <a href="/">
             <img src="../images/logoL.png" alt="logo" class="logo">
         </a>
@@ -9,9 +9,17 @@
             <i class='bx bx-menu-alt-left' id="close-icon"></i>
         </label>
         <nav class="navbar">
-            <a href="/users/login" style="--i:0;">Login</a>
-            <a href="/users/register" style="--i:1;">Register</a>
-            <a href="/about" style="--i:2;">About</a>
+            <a href="/" style="--i:0;">Home</a>
+            {{#if isAuthenticated}}
+            <a href="/notes/records" style="--i:1;">Your notes</a>
+            <a href="/notes/note" style="--i:2;">Create</a>
+            <a href="/users/logout" style="--i:3;">Logout</a>
+            {{else}}
+            <a href="/users/login" style="--i:4;">Login</a>
+            <a href="/users/register" style="--i:5;">Register</a>
+            {{/if}}
+            <a href="/about" style="--i:6;">About</a>
+
         </nav>
     </header>
     <div class="main-auth-page">

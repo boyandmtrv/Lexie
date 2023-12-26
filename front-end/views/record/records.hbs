@@ -1,7 +1,7 @@
 <main>
-    <header class="header">
+   <header class="header">
         <a href="/">
-            <img src="/images/logoL.png" alt="logo" class="logo">
+            <img src="../images/logoL.png" alt="logo" class="logo">
         </a>
         <input type="checkbox" id="check">
         <label for="check" class="icons">
@@ -10,25 +10,20 @@
         </label>
         <nav class="navbar">
             <a href="/" style="--i:0;">Home</a>
-            <a href="/about" style="--i:2;">About</a>
             {{#if isAuthenticated}}
-            <a href="/dashboard" style="--i:0;">Dashboard</a>
-            <a href="/notes/records" style="--i:0;">Your notes</a>
-            <a href="/notes/note" style="--i:0;">Create</a>
-            <a href="/users/logout" style="--i:0;">Logout</a>
+            <a href="/notes/records" style="--i:1;">Your notes</a>
+            <a href="/notes/note" style="--i:2;">Create</a>
+            <a href="/users/logout" style="--i:3;">Logout</a>
             {{else}}
-            <a href="/users/login" style="--i:0;">Login</a>
-            <a href="/users/register" style="--i:1;">Register</a>
+            <a href="/users/login" style="--i:4;">Login</a>
+            <a href="/users/register" style="--i:5;">Register</a>
             {{/if}}
+            <a href="/about" style="--i:6;">About</a>
+
         </nav>
     </header>
 
     <div class="left-side">
-        <div class="dash-nav">
-            <ul class="dash-li">
-                <li><a href="/dashboard"><i class='bx bxs-chevrons-left'></i></a></li>
-            </ul>
-        </div>
         <div class="record-section">
             <div class="record-note">
                 {{#each notes}}
@@ -37,36 +32,6 @@
                 <p class="nothing-note">There are no notes yet</p>
                 {{/each}}
             </div>
-        </div>
-    </div>
-    <div class="right-side">
-        <div class="main-nav">
-            <ul>
-                <li>
-                    <a href="/">
-                        <span class="icon"><i class='bx bx-home-alt-2'></i></span>
-                        <span class="text">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/notes/records">
-                        <span class="icon"><i class='bx bx-note'></i></span>
-                        <span class="text">Notes</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/notes/note">
-                        <span class="icon"><i class='bx bxs-edit'></i></span>
-                        <span class="text">Create</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/users/logout">
-                        <span class="icon"><i class='bx bx-log-out'></i></span>
-                        <span class="text">Logout</span>
-                    </a>
-                </li>
-            </ul>
         </div>
     </div>
 </main>
