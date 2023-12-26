@@ -11,33 +11,40 @@
         <nav class="navbar">
             <a href="/" style="--i:0;">Home</a>
             {{#if isAuthenticated}}
-            <a href="/dashboard" style="--i:1;">Dashboard</a>
-            <a href="/notes/records" style="--i:2;">Your notes</a>
-            <a href="/notes/note" style="--i:3;">Create</a>
-            <a href="/users/logout" style="--i:4;">Logout</a>
+            <a href="/notes/records" style="--i:1;">Your notes</a>
+            <a href="/notes/note" style="--i:2;">Create</a>
+            <a href="/users/logout" style="--i:3;">Logout</a>
             {{else}}
-            <a href="/users/login" style="--i:5;">Login</a>
-            <a href="/users/register" style="--i:6;">Register</a>
+            <a href="/users/login" style="--i:4;">Login</a>
+            <a href="/users/register" style="--i:5;">Register</a>
             {{/if}}
-            <a href="/about" style="--i:7;">About</a>
+            <a href="/about" style="--i:6;">About</a>
 
         </nav>
     </header>
     <div class="content">
+        {{#if isAuthenticated}}
+        <h1 class="welcomeTitle">Welcome {{user.username}},</h1>
+        <p class="welcomeP">Here, you can seamlessly organize and <br /> manage all your notes.</p>
+        <div class="welcomeBtnContainer">
+            <a class="welcomeBtn" href="/notes/records">All notes</a>
+            <a class="welcomeBtn" href="/notes/note">Create note</a>
+        </div>
+        {{else}}
         <h1>Le<span>x</span>ie.</h1>
         <p>Works for your personal space</p>
         <a href="/users/register">Get Started</a>
+        <div class="backContent">
+            <span>Achive</span>
+            <span>Improve</span>
+            <span>Trust</span>
+            <span>yourself</span>
+        </div>
+        {{/if}}
         <div class="socialIcons">
             <i class='bx bxl-linkedin'></i>
             <i class='bx bxl-github'></i>
         </div>
-    </div>
-    <div class="rightSide">
-        <h1 class="headingRight">
-            <span>progress</span><br />
-            <span>thoughts</span><br />
-            <span>yourself</span>
-        </h1>
     </div>
 
 </main>
