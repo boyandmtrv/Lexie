@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&family=Josefin+Sans&family=Onest&family=Raleway&family=Roboto&display=swap');
+
 
 .note-form {
     display: flex;
@@ -11,7 +11,6 @@
 
 input#name,
 textarea {
-    font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -21,14 +20,15 @@ textarea {
     font-size: 40px;
     box-sizing: border-box;
     border: none;
-    border-bottom: 1px solid #f3f3f3;
     outline: none;
     font-weight: 800;
+    background: #ffffff41;
+    border-radius: 10px;
 }
 
 input[type="text"]::placeholder,
 textarea::placeholder {
-    color: #E1E1E0;
+    color: #000;
 }
 
 textarea {
@@ -49,6 +49,7 @@ textarea {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+
     margin-top: 30px;
 }
 
@@ -58,21 +59,25 @@ textarea {
     font-size: 16px;
     border: 1px solid #ccc;
     outline: none;
+    background: #ffffff41;
+    border-radius: 10px;
 }
 
 .submit-container {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    
 }
 
 .submit-container input[type="submit"] {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: transparent;
     border: 1px solid #ccc;
     color: black;
     cursor: pointer;
+    background: #ffffff41;
+    border-radius: 10px;
     outline: none;
 
 }

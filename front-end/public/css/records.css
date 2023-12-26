@@ -8,15 +8,16 @@
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: #fff;
+    background-color: transparent;
     flex-direction: row;
+    padding-top: 5%;
     flex-wrap: wrap;
 }
 
 .each-note {
     width: 380px;
     height: 380px;
-    background-color: #fff;
+    background-color: #ffffff25;
     text-align: left;
     line-height: 30px;
     border-radius: 10px;
@@ -75,11 +76,11 @@
 }
 
 .each-note:hover {
-    background-color: #fff;
+    background-color: #ffffff6d;
 }
 
 .each-note:hover p {
-    color: #fff; 
+    color: transparent; 
 }
 
 .nothing-note {
