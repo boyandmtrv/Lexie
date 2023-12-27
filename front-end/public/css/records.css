@@ -15,8 +15,8 @@
 }
 
 .each-note {
-    width: 380px;
-    height: 380px;
+    width: 405px;
+    height: 405px;
     background-color: #ffffff25;
     text-align: left;
     line-height: 30px;
@@ -61,12 +61,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #8C52FF;
     color: white;
-    border: 1px solid #cccccc8c;
+    border: 1px solid #ffffff8c;
+    border-radius: 10px;
     padding: 10px 20px;
     text-decoration: none;
-    color: #000000;
     opacity: 0; 
 }
 
@@ -88,4 +88,31 @@
     font-size: 24px; 
     margin-top: 50vh;
     margin-left: 90vh; 
+}
+
+
+@media (max-width: 992px) {
+
+
+    .each-note {
+        margin-top: 100px;
+        width: 350px;
+        height: 350px;
+        margin-left: 50px;
+        gap: 1px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+ 
+    .each-note {
+        margin-top: 100px;
+        width: 350px;
+        height: 350px;
+        margin-left: 20px;
+        gap: 1px;
+    }
+
 }
