@@ -1,4 +1,6 @@
-
+.dash-nav {
+    margin-top: -50px;
+}
 
 .note-form {
     display: flex;
@@ -44,42 +46,54 @@ textarea {
     box-sizing: border-box;
     padding: 20px;
 }
+
 .options {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-
     margin-top: 30px;
+
 }
 
-.options select, .options input[type="date"] {
+.options select,
+.options input[type="date"] {
     margin-right: 10px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     outline: none;
-    background: #ffffff41;
-    border-radius: 10px;
+    background: transparent;
+}
+#type-related {
+    border-radius: 50px;
+    background-color: transparent;
+
 }
 
 .submit-container {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    
+
 }
 
 .submit-container input[type="submit"] {
     padding: 10px 20px;
     font-size: 16px;
     border: 1px solid #ccc;
-    color: black;
+    color: #fff;
     cursor: pointer;
-    background: #ffffff41;
-    border-radius: 10px;
+    background: #8C52FF;
+    border-radius: 50px;
     outline: none;
+    transition: background-color 0.3s ease-in-out;
 
+}
+
+.submit-container input[type="submit"]:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 ::-webkit-scrollbar {
@@ -92,4 +106,39 @@ textarea {
 }
 
 
+@media (max-width: 768px) {
 
+
+    input#name {
+        width: 150%;
+        text-align: start;
+        font-size: 20px;
+        margin-left: -55px;
+    }
+
+    textarea {
+        width: 150%;
+        font-size: 15px;
+        margin-left: -55px;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+    }
+
+
+    .options input[type="date"] {
+        margin-top: 20px;
+    }
+
+    .submit-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: -10px;
+    }
+
+
+}
