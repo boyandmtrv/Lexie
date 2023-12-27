@@ -24,7 +24,7 @@
     </header>
     <div class="content">
         {{#if isAuthenticated}}
-        <h1 class="welcomeTitle">Welcome {{user.username}},</h1>
+        <h1 class="welcomeTitle">Welcome <span>{{user.username}}</span>,</h1>
         <p class="welcomeP">Here, you can seamlessly organize and <br /> manage all your notes.</p>
         <div class="welcomeBtnContainer">
             <a class="welcomeBtn" href="/notes/records">All notes</a>
@@ -42,9 +42,14 @@
         </div>
         {{/if}}
         <div class="socialIcons">
-            <i class='bx bxl-linkedin'></i>
-            <i class='bx bxl-github'></i>
+            <a href="https://www.linkedin.com/in/boyan-dimitrov-4402b4179/" target="_blank">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/boyandmtrv" target="_blank">
+                <i class='bx bxl-github'></i>
+            </a>
         </div>
+
     </div>
 
 </main>
