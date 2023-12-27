@@ -1,6 +1,99 @@
-.details-options {
+.note-form {
     display: flex;
-    justify-content: flex-start; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.note-form {
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+input#nameOnly {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 80vw;
+    height: 100px;
+    padding: 15px;
+    font-size: 40px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-weight: 800;
+    background: #ffffff41;
+    border-radius: 10px;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #000;
+}
+
+textarea#descriptionOnly {
+    height: 600px;
+    resize: vertical;
+    font-size: 20px;
+    font-weight: 100;
+    resize: none;
+}
+
+.options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.options select,
+.options input[type="date"] {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: #ffffff41;
+    border-radius: 10px;
+}
+
+.submit-container-details {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+
+.submit-container-details input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    color: black;
+    cursor: pointer;
+    background: #ffffff41;
+    border-radius: 10px;
+    outline: none;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #E1E1E0, #ffffff, #ffffff, #ffffff, #ffffff);
+    border-radius: 10px;
+}
+
+.details-options-details {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     margin-top: 30px;
@@ -12,27 +105,34 @@
     margin-left: 170px;
 }
 
+
 input[type="date"] {
     margin-right: 10px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     outline: none;
+    border-radius: 25px;
+    background-color: transparent;
+
 }
 
 .details-type {
-    margin-right: 10px; 
+    margin-right: 10px;
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     outline: none;
+    border-radius: 25px;
+
 }
 
-.submit-container {
+.submit-container-details {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     margin-right: 160px;
+    
 }
 
 .details-btn {
@@ -45,24 +145,70 @@ input[type="date"] {
     outline: none;
     margin-right: 10px;
     text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.details-btn:nth-child(2) {
+    background-color: #8C52FF; 
+    color: #fff;
+}
+
+.details-btn:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 .dash-nav {
-    position: absolute;
-    top: -5%;
-}
-
-.dash-li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dash-li a {
-    text-decoration: none;
-    color: black;
+    margin-top: -50px;
 }
 
 .bx.bxs-chevrons-left {
-    font-size: 35px; 
+    font-size: 35px;
+}
+
+@media (max-width: 768px) {
+
+
+    input#nameOnly {
+        width: 100%;
+        text-align: start;
+        font-size: 20px;
+        margin-left: -5px;
+    }
+
+    textarea#descriptionOnly {
+        width: 100%;
+        font-size: 15px;
+        margin-left: -5px;
+    }
+
+    .details-options-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        margin-top: 30px;
+        margin-left: -150px;
+    }
+
+
+    .options input[type="date"] {
+        margin-top: 20px;
+    }
+
+    .submit-container-details {
+        display: flex;
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 250px;
+    }
+
+    /* .details-btn {
+        margin-left: 100px;
+    } */
+
+
 }
