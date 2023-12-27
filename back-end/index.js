@@ -8,6 +8,7 @@ const handlebarsConfig = require('./config/handlebarsConfig');
 const dbConnect = require('./config/dbConfig');
 const errorHandler = require('./middlewares/errorMiddleware');
 
+
 const routes = require('./router');
 
 const app = express();
