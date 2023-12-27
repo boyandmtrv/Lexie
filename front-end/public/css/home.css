@@ -197,25 +197,9 @@
     margin-left: -50px;
 }
 
-.socialIcons {
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.socialIcons i {
-    font-size: 2rem;
-    margin: 0 10px;
-}
-
 .welcomeBtnContainer {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .welcomeBtnContainer a {
@@ -236,6 +220,40 @@
     background-color: #8C52FF;
 }
 
+.socialIcons {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.socialIcons a {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+}
+
+
+.socialIcons i {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #000;
+    transition: .3s ease-in-out;
+}
+
+.socialIcons a:hover {
+    background-color: transparent;
+}
+
+.socialIcons i:hover {
+    color: #8C52FF;
+
+}
 
 @media (max-width: 992px) {
 
@@ -243,7 +261,7 @@
     .header {
         padding: 1.3rem 5%;
     }
-    
+
     .content a {
         width: 20%;
     }
@@ -251,6 +269,17 @@
     .backContent {
         display: none;
     }
+
+
+    .welcomeBtnContainer a {
+        width: 150px;
+        height: 70px;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 18px;
+        border-radius: 50px;
+    }
+
 
 }
 
@@ -333,5 +362,47 @@
         animation: popUp 1s forwards ease-in-out;
         animation-delay: 1s;
     }
+
+    .content .welcomeTitle {
+        font-size: 5rem;
+    }
+
+    .content .welcomeP {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+
+    .welcomeBtnContainer {
+        display: flex;
+        gap: 10px;
+    }
+
+    .welcomeBtnContainer a {
+        width: 120px;
+        height: 50px;
+        padding: 12px;
+        margin-top: 40px;
+        font-size: 15px;
+    }
+
+    .socialIcons a {
+        border: none;
+    }
+    
+    
+    .socialIcons i {
+        color: #000;
+        transition: .3s ease-in-out;
+    }
+    
+    .socialIcons a:hover {
+        background-color: transparent;
+    }
+    
+    .socialIcons i:hover {
+        color: #8C52FF;
+    
+    }
+
 
 }
