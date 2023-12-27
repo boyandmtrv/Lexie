@@ -1,20 +1,20 @@
 <main>
     <div class="note-section">
-         <div class="dash-nav">
+        <div class="dash-nav">
             <ul class="dash-li">
                 <li><a href="/notes/records"><i class='bx bxs-chevrons-left'></i></a></li>
             </ul>
         </div>
         <div class="note-form">
             {{#with note}}
-            <input type="text" id="name" name="name" value="{{name}}" readonly>
-            <textarea readonly id="description" name="description">{{description}}</textarea>
-            <div class="details-options">
-               <div class="options-select">
+            <input type="text" id="nameOnly" name="name" value="{{name}}" readonly>
+            <textarea readonly id="descriptionOnly" name="description">{{description}}</textarea>
+            <div class="details-options-details">
+                <div class="options-select">
                     <p class="details-type">{{typeRelated}}</p>
                     <input type="date" value="{{date}}" name="date" readonly>
                 </div>
-                <div class="submit-container">
+                <div class="submit-container-details">
                     <a class="details-btn" href="/notes/{{_id}}/edit">Edit</a>
                     <a class="details-btn" href="/notes/{{_id}}/delete">Delete</a>
                 </div>
