@@ -1,0 +1,123 @@
+<main class="about-main">
+    <header class="header">
+        <a href="/">
+            <img src="./images/logoL.png" alt="logo" class="logo">
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu-alt-right' id="menu-icon"></i>
+            <i class='bx bx-menu-alt-left' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="/" style="--i:0;">Home</a>
+            {{#if isAuthenticated}}
+            <a href="/notes/records" style="--i:1;">Your notes</a>
+            <a href="/notes/note" style="--i:2;">Create</a>
+            <a href="/users/logout" style="--i:3;">Logout</a>
+            {{else}}
+            <a href="/users/login" style="--i:4;">Login</a>
+            <a href="/users/register" style="--i:5;">Register</a>
+            {{/if}}
+            <a href="/about" style="--i:6;">About</a>
+        </nav>
+    </header>
+    <div class="about-content-heading">
+        <h1 class="about-heading"><span>Lexie</span> minimalistic Note-Taking App</h1>
+    </div>
+    <div class="about-content">
+        <p class="about-description">
+            Lexie is a sleek and minimalistic note-taking application designed for users who appreciate simplicity and
+            functionality. With a clean and intuitive interface reminiscent of Notion, Lexie allows users to seamlessly
+            organize their thoughts, tasks, and ideas in a user-friendly environment.
+        </p>
+    </div>
+
+    <div class="features">
+        <p>Features</p>
+    </div>
+    <div class="feature-content">
+        <p>User-focused personal space: <br />
+            Each user is provided with a dedicated and private space within Lexie.
+            Personal spaces ensure that users can only access and view their own notes, providing a secure and
+            individualized
+            experience.
+            Note Types:
+
+            Lexie offers two distinct note types: Work-related and Personal.
+            Users can categorize their notes based on the context, making it easy to organize and find relevant
+            information.
+            Date Tracking:
+
+            Users can add date information to each note, allowing for chronological organization and tracking of
+            activities over
+            time.</p>
+
+        <p>Functionalities<br />
+        - Edit: Users can modify their notes, ensuring that the information remains up-to-date and relevant. <br />
+        -  Delete: Unnecessary or completed notes can be easily removed, maintaining a clutter-free workspace.    <br />
+        - Create a Note: The app provides a simple and straightforward note creation process. Users can quickly jot down ideas or tasks without unnecessary complexity, promoting a smooth and efficient workflow.
+        </p>
+
+    </div>
+    <div class="bottom-content">
+        <p>Lexie boasts a minimalist and slick design, ensuring a distraction-free environment for users to
+            focus on
+            their notes.
+            The user interface is thoughtfully crafted to be visually appealing and intuitive.
+            Whether you're managing work-related projects or jotting down personal thoughts, Lexie offers a
+            tailored
+            and secure
+            space for users to stay organized and boost productivity. With its multipage architecture and clean
+            design, Lexie brings
+            simplicity and efficiency to the world of note-taking, making it a go-to platform for users who
+            value a
+            minimalist
+            approach to productivity.</p>
+    </div>
+    </div>
+</main>
+
+
+{{!-- Lexie - Minimalistic Note-Taking App
+
+Lexie is a sleek and minimalistic note-taking application designed for users who appreciate simplicity and
+functionality. With a clean and intuitive interface reminiscent of Notion, Lexie allows users to seamlessly organize
+their thoughts, tasks, and ideas in a user-friendly environment.
+
+Key Features:
+
+User-Focused Personal Spaces:
+
+Each user is provided with a dedicated and private space within Lexie.
+Personal spaces ensure that users can only access and view their own notes, providing a secure and individualized
+experience.
+Note Types:
+
+Lexie offers two distinct note types: Work-related and Personal.
+Users can categorize their notes based on the context, making it easy to organize and find relevant information.
+Date Tracking:
+
+Users can add date information to each note, allowing for chronological organization and tracking of activities over
+time.
+Edit and Delete Functionality:
+
+Edit: Users can modify their notes, ensuring that the information remains up-to-date and relevant.
+Delete: Unnecessary or completed notes can be easily removed, maintaining a clutter-free workspace.
+Create a Note:
+
+The app provides a simple and straightforward note creation process.
+Users can quickly jot down ideas or tasks without unnecessary complexity, promoting a smooth and efficient workflow.
+Multi-Page Structure:
+
+Lexie follows a multipage structure, allowing users to navigate seamlessly between different sections of the
+application.
+Each page is designed for specific functionalities, enhancing user experience and ease of use.
+Slick Design:
+
+Lexie boasts a minimalist and slick design, ensuring a distraction-free environment for users to focus on their notes.
+The user interface is thoughtfully crafted to be visually appealing and intuitive.
+Whether you're managing work-related projects or jotting down personal thoughts, Lexie offers a tailored and secure
+space for users to stay organized and boost productivity. With its multipage architecture and clean design, Lexie brings
+simplicity and efficiency to the world of note-taking, making it a go-to platform for users who value a minimalist
+approach to productivity.
+--}}
